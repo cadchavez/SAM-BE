@@ -41,10 +41,10 @@
             <h5 style="color:#432457">Welcome to my <span class="w3-tag" style="background-color:#2B153A">sea of memories</span></h5>
         </header>
 
-            <!-- Faith Haven Card -->
         <div class="w3-row">
-                <!-- Faith Haven Card -->
+                    
                     <div class="w3-col l8 s12">
+                        <!-- Faith Haven Card -->
                         <div class="w3-card-4 w3-margin w3-white" id="faith-haven">
                             <?php
                             // Query to get the details of "Faith Haven"
@@ -104,7 +104,7 @@
 
                                         <div class="w3-row">
                                             <?php
-                                            // Query to get the images associated with Faith Haven
+                            
                                             $imageQuery = "SELECT * FROM islandcontents WHERE islandOfPersonalityID = " . $row['islandOfPersonalityID'];
                                             $imageResult = executeQuery($imageQuery);
                                             while ($imageRow = mysqli_fetch_array($imageResult)) {
@@ -129,7 +129,7 @@
                         <!-- Leisure Lagoon Card -->
                         <div class="w3-card-4 w3-margin w3-white" id="leisure-lagoon">
                             <?php
-                            // Query to get the details of "Faith Haven"
+                            
                             $query = "SELECT * FROM islandsOfPersonality WHERE name = 'Leisure Lagoon'";
                             $result = executeQuery($query);
 
@@ -145,7 +145,7 @@
 
                                         <div class="w3-row">
                                             <?php
-                                            // Query to get the images associated with Faith Haven
+                                            
                                             $imageQuery = "SELECT * FROM islandcontents WHERE islandOfPersonalityID = " . $row['islandOfPersonalityID'];
                                             $imageResult = executeQuery($imageQuery);
                                             while ($imageRow = mysqli_fetch_array($imageResult)) {
@@ -170,7 +170,7 @@
                         <!-- The Helping Hand Card -->
                         <div class="w3-card-4 w3-margin w3-white" id="the-helping-hand">
                             <?php
-                            // Query to get the details of "Faith Haven"
+                            
                             $query = "SELECT * FROM islandsOfPersonality WHERE name = 'The Helping Hand'";
                             $result = executeQuery($query);
 
@@ -186,7 +186,7 @@
 
                                         <div class="w3-row">
                                             <?php
-                                            // Query to get the images associated with Faith Haven
+                                           
                                             $imageQuery = "SELECT * FROM islandcontents WHERE islandOfPersonalityID = " . $row['islandOfPersonalityID'];
                                             $imageResult = executeQuery($imageQuery);
                                             while ($imageRow = mysqli_fetch_array($imageResult)) {
@@ -274,9 +274,5 @@
             </div>
         </div>
     </div>
-
-    
-
 </body>
-
 </html>
