@@ -22,26 +22,30 @@
         h5 {
             font-family: "Poppins", sans-serif
         }
+
+        body {
+            margin: 0;
+            background-color: #92789F;
+        }
     </style>
 </head>
 
-<body style="background-color: #B1C6D4">
+<body>
 
-    <!-- w3-content defines a container for fixed size centered content, 
-and is wrapped around the whole page content, except for the footer in this example -->
     <div class="w3-content" style="max-width:1400px">
 
         <!-- Header -->
         <header class="w3-container w3-center w3-padding-32">
-            <h1><b>CORE MEMORIES</b></h1>
-            <p>Welcome to my <span class="w3-tag">sea of memories</span></p>
+            <img src="../A05/images/logo.png" style="width:15%">
+            <h1 style="color:#432457"><b>CORE MEMORIES</b></h1>
+            <h5 style="color:#432457">Welcome to my <span class="w3-tag" style="background-color:#2B153A">sea of memories</span></h5>
         </header>
 
             <!-- Faith Haven Card -->
         <div class="w3-row">
                 <!-- Faith Haven Card -->
                     <div class="w3-col l8 s12">
-                        <div class="w3-card-4 w3-margin w3-white">
+                        <div class="w3-card-4 w3-margin w3-white" id="faith-haven">
                             <?php
                             // Query to get the details of "Faith Haven"
                             $query = "SELECT * FROM islandsOfPersonality WHERE name = 'Faith Haven'";
@@ -82,7 +86,7 @@ and is wrapped around the whole page content, except for the footer in this exam
                         </div>
 
                         <!-- Bonded Isle Card -->
-                        <div class="w3-card-4 w3-margin w3-white">
+                        <div class="w3-card-4 w3-margin w3-white" id="bonded-isle">
                             <?php
                             // Query to get the details of "Faith Haven"
                             $query = "SELECT * FROM islandsOfPersonality WHERE name = 'Bonded Isle'";
@@ -123,7 +127,7 @@ and is wrapped around the whole page content, except for the footer in this exam
                         </div>
 
                         <!-- Leisure Lagoon Card -->
-                        <div class="w3-card-4 w3-margin w3-white">
+                        <div class="w3-card-4 w3-margin w3-white" id="leisure-lagoon">
                             <?php
                             // Query to get the details of "Faith Haven"
                             $query = "SELECT * FROM islandsOfPersonality WHERE name = 'Leisure Lagoon'";
@@ -164,7 +168,7 @@ and is wrapped around the whole page content, except for the footer in this exam
                         </div>
 
                         <!-- The Helping Hand Card -->
-                        <div class="w3-card-4 w3-margin w3-white">
+                        <div class="w3-card-4 w3-margin w3-white" id="the-helping-hand">
                             <?php
                             // Query to get the details of "Faith Haven"
                             $query = "SELECT * FROM islandsOfPersonality WHERE name = 'The Helping Hand'";
@@ -173,7 +177,7 @@ and is wrapped around the whole page content, except for the footer in this exam
                             // Check if any data is returned
                             if ($row = mysqli_fetch_array($result)) {
                             ?>
-                                <div class="card" style="background-color: #8C7E9C">
+                                <div class="card" style="background-color: #99E699">
                                     <!-- Title -->
                                     <div class="w3-container">
                                         <h3><b><?php echo $row['name']; ?></b></h3>
@@ -217,7 +221,7 @@ and is wrapped around the whole page content, except for the footer in this exam
                 <!-- Posts -->
                 <div class="w3-card w3-margin">
                     <div class="w3-container w3-padding">
-                        <h4>Popular Posts</h4>
+                        <h4 style="color:white">Popular Posts</h4>
                     </div>
                     <ul class="w3-ul w3-hoverable w3-white">
                         <li class="w3-padding-16">
@@ -247,7 +251,7 @@ and is wrapped around the whole page content, except for the footer in this exam
                 <!-- Labels / tags -->
                 <div class="w3-card w3-margin">
                     <div class="w3-container w3-padding">
-                        <h4>Tags</h4>
+                        <h4 style="color:white">Tags</h4>
                     </div>
                     <div class="w3-container w3-white">
                         <p><span class="w3-tag w3-black w3-margin-bottom">Core Memories</span> <span
