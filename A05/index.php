@@ -32,15 +32,18 @@ and is wrapped around the whole page content, except for the footer in this exam
     <div class="w3-content" style="max-width:1400px">
 
         <!-- Header -->
-        <header class="w3-container w3-center w3-padding-32">
-            <h1><b>CORE MEMORIES</b></h1>
-            <p>Welcome to my <span class="w3-tag">sea of memories</span></p>
-        </header>
+                <header class="w3-container w3-center w3-padding-32">
+                    <h1><b>CORE MEMORIES</b></h1>
+                    <p>Welcome to my <span class="w3-tag">sea of memories</span></p>
+                </header>
 
-        <!-- Faith Haven Card -->
-        <div class="w3-row">
-            <div class="w3-col l8 s12">
+                <!-- Introduction menu -->
+                
+
                 <!-- Faith Haven Card -->
+                <div class="w3-row">
+            <!-- Faith Haven Card (Left) -->
+            <div class="w3-col l8 s12">
                 <div class="w3-card-4 w3-margin w3-white">
                     <?php
                     // Query to get the details of "Faith Haven"
@@ -49,8 +52,8 @@ and is wrapped around the whole page content, except for the footer in this exam
 
                     // Check if any data is returned
                     if ($row = mysqli_fetch_array($result)) {
-                        ?>
-                        <div class="card">
+                    ?>
+                        <div class="card" style="background-color: #C4D199">
                             <!-- Title -->
                             <div class="w3-container">
                                 <h3><b><?php echo $row['name']; ?></b></h3>
@@ -63,23 +66,34 @@ and is wrapped around the whole page content, except for the footer in this exam
                                     $imageQuery = "SELECT * FROM islandcontents WHERE islandOfPersonalityID = " . $row['islandOfPersonalityID'];
                                     $imageResult = executeQuery($imageQuery);
                                     while ($imageRow = mysqli_fetch_array($imageResult)) {
-                            
-                                    $imageFile = $imageRow['image'];
-                                    $content = $imageRow['content']; 
-                                        ?> 
+                                        $imageFile = $imageRow['image'];
+                                        $content = $imageRow['content']; 
+                                    ?>
                                         <div class="w3-col l12 m6 s12" style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-bottom: 30px;">
                                             <img src="images/<?php echo $imageFile; ?>" alt="Faith Haven Image" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
                                             <p style="text-align: center; margin-top: 10px;"><?php echo $content; ?></p> <!-- Display the content from islandcontents -->
                                         </div>
-                                        <?php
+                                    <?php
                                     }
                                     ?>
                                 </div>
                             </div>
-                </div>
+                        </div>
                     <?php
                     }
                     ?>
+                </div>
+            </div>
+
+            <!-- Introductory Card (Right) -->
+            <div class="w3-col l4 s12">
+                <div class="w3-card w3-margin w3-margin-top">
+                    <img src="../A05/images/self.png" style="width:100%">
+                    <div class="w3-container w3-white">
+                        <h4><b>Christell Angelica</b></h4>
+                        <p>Hello! I’m Christell Angelica Chavez, a 22-year-old student and babysitter from San Pablo, Sto. Tomas. I’m someone who values faith, family, hobbies, and work, as these define who I am. Whether I’m nurturing young minds or pursuing my passions, I approach life with dedication and care.<br><br>This website is a window into the moments and memories that shape me. Each section reflects an island of my personality, offering a glimpse into what inspires me, keeps me grounded, and drives me forward. <br><br>Welcome to a collection of experiences that make me, me.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
